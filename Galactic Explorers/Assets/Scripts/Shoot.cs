@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    public Transform shootingPoint;
+    public Transform firePoint;
     public GameObject bullet;
+
+    public float bulletForce = 20f;
     private void OnFire() {
-        Instantiate(bullet, shootingPoint.position, transform.rotation);
+        bullet = Instantiate(bullet, firePoint.position, transform.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
     }
+
+    
 }
