@@ -9,9 +9,8 @@ public class PlayerAimWeapon : MonoBehaviour
     public Transform firePoint;
     public float bulletSpeed = 50;
     float lookAngle;
-
+    Vector3 lookDirection;
     private Animator aimAnimator;
-
 
    private void Awake() {
         aimTransform = transform.Find("Aim");
@@ -21,11 +20,11 @@ public class PlayerAimWeapon : MonoBehaviour
    private void Update() {
         HandleAiming();
         HandleShooting();
-
+ 
    }
 
     private void HandleAiming(){
-        Vector3 lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
+        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
         
         Vector3 aimDirection = (lookDirection - transform.position);
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
@@ -45,4 +44,5 @@ public class PlayerAimWeapon : MonoBehaviour
             bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
         }
     }
+    
 }
