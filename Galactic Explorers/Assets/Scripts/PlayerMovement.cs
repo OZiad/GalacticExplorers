@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
-{ 
+{
 
     private Vector2 moveInput;
     private Rigidbody2D playerRigidbody2D;
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnFire()
     {
-        
+
     }
     void Run()
     {

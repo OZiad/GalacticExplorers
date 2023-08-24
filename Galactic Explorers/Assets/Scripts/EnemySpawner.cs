@@ -9,21 +9,25 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject[] enemyPrefabs;
 
     [SerializeField] private bool canSpawn = true;
-    private void Start(){
+    private void Start()
+    {
         StartCoroutine(Spawner());
     }
 
-    private IEnumerator Spawner(){
+    private IEnumerator Spawner()
+    {
         WaitForSeconds wait = new WaitForSeconds(spawnRate);
 
-        while (canSpawn) {
+        while (canSpawn)
+        {
             yield return wait;
             SpawnEnemy();
 
         }
     }
 
-    private void SpawnEnemy() {
+    private void SpawnEnemy()
+    {
 
         int rand = Random.Range(0, enemyPrefabs.Length);
         GameObject enemyToSpawn = enemyPrefabs[rand];

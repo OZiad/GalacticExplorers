@@ -5,16 +5,6 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] public int health = 1;
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-       
-    }
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Bullet"))

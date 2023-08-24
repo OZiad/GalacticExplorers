@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAimWeapon : MonoBehaviour
 {
-   private Transform aimTransform;
+    private Transform aimTransform;
     public GameObject bullet;
     public Transform firePoint;
     public float bulletSpeed = 50;
@@ -12,28 +12,32 @@ public class PlayerAimWeapon : MonoBehaviour
     Vector3 lookDirection;
     private Animator aimAnimator;
 
-   private void Awake() {
+    private void Awake()
+    {
         aimTransform = transform.Find("Aim");
         aimAnimator = aimTransform.GetComponent<Animator>();
-   }
+    }
 
-   private void Update() {
+    private void Update()
+    {
         HandleAiming();
         HandleShooting();
- 
-   }
 
-    private void HandleAiming(){
-        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
-        
+    }
+
+    private void HandleAiming()
+    {
+        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
         Vector3 aimDirection = (lookDirection - transform.position);
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
 
-        aimTransform.eulerAngles = new Vector3(0,0, angle);
+        aimTransform.eulerAngles = new Vector3(0, 0, angle);
         Debug.Log(angle);
     }
 
-    private void HandleShooting(){
+    private void HandleShooting()
+    {
         if (Input.GetMouseButtonDown(0))
         {
             aimAnimator.SetTrigger("Shoot");
@@ -44,6 +48,6 @@ public class PlayerAimWeapon : MonoBehaviour
             bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
         }
     }
-    
-    
+
+
 }

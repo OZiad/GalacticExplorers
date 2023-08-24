@@ -16,8 +16,9 @@ public class flipGun : MonoBehaviour
         facingRight = !facingRight;
         transform.Rotate(180f, 0f, 0f);
     }
-    private void fGun(){
-        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
+    private void fGun()
+    {
+        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (lookDirection.x > transform.position.x && !facingRight)
         {
             flip();

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    public GameObject player; 
-    
+    public GameObject player;
+
     public float speed;
     private float distance;
 
-    void Start() {
+    void Start()
+    {
         player = GameObject.FindGameObjectWithTag("Player");
     }
-    void Update() {
+    void Update()
+    {
         distance = Vector2.Distance(transform.position, player.transform.position);
 
         Vector2 direction = player.transform.position - transform.position;
