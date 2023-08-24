@@ -33,14 +33,12 @@ public class PlayerAimWeapon : MonoBehaviour
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
 
         aimTransform.eulerAngles = new Vector3(0, 0, angle);
-        Debug.Log(angle);
     }
 
     private void HandleShooting()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            aimAnimator.SetTrigger("Shoot");
             GameObject bulletClone = Instantiate(bullet);
             bulletClone.transform.position = firePoint.position;
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);

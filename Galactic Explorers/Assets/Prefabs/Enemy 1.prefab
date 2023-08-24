@@ -94,8 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7639975380182940397}
   - component: {fileID: 4665420569932549427}
-  - component: {fileID: 7625097107267864942}
   - component: {fileID: 7529575865195940625}
+  - component: {fileID: 2592262740372480346}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -176,19 +176,6 @@ PolygonCollider2D:
       - {x: 0.11375269, y: -0.2351343}
       - {x: 0.11295376, y: -0.042397648}
   m_UseDelaunayMesh: 0
---- !u!114 &7625097107267864942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7479476026497626933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85bdcb6b48dbf15489f9e0f7bb4c0568, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
 --- !u!114 &7529575865195940625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +190,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 8993089000320789827, guid: 8e6ab85a488aa494aa5903385c71bc38, type: 3}
   speed: 10
+--- !u!114 &2592262740372480346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7479476026497626933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bdcb6b48dbf15489f9e0f7bb4c0568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
+  health: 1
+  dmg: 1
