@@ -68,7 +68,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 14.583548
+  orthographic size: 16.33384
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -337,12 +337,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5030156173904692463}
-  - component: {fileID: 3817457470240545662}
   - component: {fileID: 6486458804061357305}
   - component: {fileID: 8250881866439383502}
   - component: {fileID: 4132397805354739073}
   - component: {fileID: 365941284641706205}
   - component: {fileID: 3747051401480243964}
+  - component: {fileID: 4054961947319000382}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -367,27 +367,6 @@ Transform:
   - {fileID: 454358877114269599}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &3817457470240545662
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8993089000320789827}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &6486458804061357305
 Rigidbody2D:
   serializedVersion: 4
@@ -525,3 +504,24 @@ MonoBehaviour:
   bullet: {fileID: 5056708152557977447, guid: 33c43e3de3f20b347bf02be4cd501771, type: 3}
   firePoint: {fileID: 6308255355781575563}
   bulletSpeed: 50
+--- !u!95 &4054961947319000382
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993089000320789827}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab0f67b4cc80294459154bd3f7a2d4ed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
