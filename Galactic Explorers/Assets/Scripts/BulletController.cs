@@ -10,8 +10,7 @@ public class BulletController : MonoBehaviour
         // Check if the colliding object has a specific tag
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("collided with enemy");
-            // Destroy this game object (the one with the script attached)
+            // Deal dmg here
         }
         Destroy(this.gameObject);
     }
