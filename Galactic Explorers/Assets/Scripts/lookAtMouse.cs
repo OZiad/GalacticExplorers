@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class lookAtMouse : MonoBehaviour
 {
-      public GameObject bullet;
+    public GameObject bullet;
     public Transform firePoint;
     public float bulletSpeed = 50;
 
