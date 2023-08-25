@@ -8,8 +8,9 @@ Baseline functionality:
 
 TO DO:
 1. Fix memory leak
-2. Add game win and lose states
-3. Add UI for player
-4. Add pause menu -> displays controls + pauses game
-5. Add enviroment and create edges the player cant go past
-6. Fix enemy visually flipping when chasing player from the right
+2. Fix player flipping when hit by enemy
+3. Add game win and lose states
+4. Add UI for player
+5. Add pause menu -> displays controls + pauses game
+6. Add enviroment and create edges the player cant go past
+7. Fix enemy visually flipping when chasing player from the right
