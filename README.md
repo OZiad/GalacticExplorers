@@ -8,10 +8,9 @@ Baseline functionality:
 
 TO DO:
 1. Fix memory leak
-2. Fix player flipping when hit by enemy
-3. Make bullets follow crosshair (currently there is a slight offset)
-4. Add game win and lose states
-5. Add UI for player
-6. Add pause menu -> displays controls + pauses game
-7. Add enviroment and create edges the player cant go past
-8. Fix enemy visually flipping when chasing player from the right
+2. Make bullets follow crosshair (currently there is a slight offset)
+3. Add game win and lose states
+4. Add UI for player
+5. Add pause menu -> displays controls + pauses game
+6. Add enviroment and create edges the player cant go past
+7. Fix enemy visually flipping when chasing player from the right
