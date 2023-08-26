@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class flipGun : MonoBehaviour
+public class FlipGun : MonoBehaviour
 {
     Vector3 lookDirection;
     bool facingRight = true;

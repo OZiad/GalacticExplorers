@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lookAtMouse : MonoBehaviour
+public class LookAtMouse : MonoBehaviour
 {
     public GameObject bullet;
     public Transform firePoint;
