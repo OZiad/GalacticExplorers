@@ -6,6 +6,7 @@ public class FlipGun : MonoBehaviour
 {
     Vector3 lookDirection;
     bool facingRight = true;
+ 
     void Update()
     {
         fGun();
