@@ -1,23 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    // [SerializeField]
-    // private
-
+    public static MenuManager instance;
     void Awake()
     {
+        instance = this;
         GameManager.OnGameStateChanged += GameManagerOnGameStateChanged;
     }
-    // Start is called before the first frame update
     void Start()
     {
 
     }
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -25,5 +22,15 @@ public class MenuManager : MonoBehaviour
     private void GameManagerOnGameStateChanged(GameState state)
     {
 
+    }
+
+    internal void ToggleLoseScreen(bool v)
+    {
+        throw new NotImplementedException();
+    }
+    internal void ToggleVictoryScreen(bool v)
+
+    {
+        throw new NotImplementedException();
     }
 }
