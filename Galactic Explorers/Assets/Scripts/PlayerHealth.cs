@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene(0);
+            GameManager.instance.UpdateGameState(GameState.Defeat);
         }
     }
 }

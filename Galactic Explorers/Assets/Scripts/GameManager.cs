@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,7 +35,8 @@ public class GameManager : MonoBehaviour
 
     private void HandleVictory()
     {
-        // MenuManager.Instance.ToggleVictoryScreen(true);
+        MenuManager.instance.ToggleVictoryScreen(true);
+
     }
     private void HandleFight()
     {
@@ -43,7 +45,8 @@ public class GameManager : MonoBehaviour
 
     private void HandleDefeat()
     {
-        // MenuManager.Instance.ToggleLoseScreen(true);
+        MenuManager.instance.ToggleLoseScreen(true);
+        SceneManager.LoadScene(0);
     }
 
 }
