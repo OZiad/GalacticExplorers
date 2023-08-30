@@ -12,4 +12,3 @@ TO DO:
 3. Add UI for player
 4. Add pause menu -> displays controls + pauses game
 5. Add enviroment and create edges the player cant go past
-6. Fix enemy visually flipping when chasing player from the right
