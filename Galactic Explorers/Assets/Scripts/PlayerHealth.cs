@@ -8,7 +8,6 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] public int health;
     [SerializeField] public int maxHealth = 5;
 
-    // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
@@ -20,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            GameManager.instance.UpdateGameState(GameState.Defeat);
+            GameManager.Instance.UpdateGameState(GameState.Defeat);
         }
     }
 }

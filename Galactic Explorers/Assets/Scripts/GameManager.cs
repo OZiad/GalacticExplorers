@@ -4,14 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+This script controls the flow of the game, taking appropriate action depending on the game state.
+The other manager scripts communicate the current game state to the game manager script
+
+Example: GameManager.Instance.UpdateGameState(GameState.Victory) 
+*/
+
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager Instance;
     public GameState state;
     public static event Action<GameState> OnGameStateChanged;
     private void Awake()
     {
-        instance = this;
+        Instance = this;
     }
     public void UpdateGameState(GameState newState)
     {
@@ -35,7 +42,8 @@ public class GameManager : MonoBehaviour
 
     private void HandleVictory()
     {
-        MenuManager.instance.ToggleVictoryScreen(true);
+        MenuManager.Instance.ToggleVictoryScreen(true);
+        SceneManager.LoadScene(0);
 
     }
     private void HandleFight()
@@ -45,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     private void HandleDefeat()
     {
-        MenuManager.instance.ToggleLoseScreen(true);
+        MenuManager.Instance.ToggleLoseScreen(true);
         SceneManager.LoadScene(0);
     }
 

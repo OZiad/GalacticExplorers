@@ -3,12 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This script handles the menu and displays victory and defeat screens
+*/
+
+
 public class MenuManager : MonoBehaviour
 {
-    public static MenuManager instance;
+    public static MenuManager Instance;
     void Awake()
     {
-        instance = this;
+        Instance = this;
         GameManager.OnGameStateChanged += GameManagerOnGameStateChanged;
     }
     void Start()
